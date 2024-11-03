@@ -1,0 +1,134 @@
+[
+    {
+        "product_id": "L001",
+        "product_title": "Laptop Pro 15",
+        "product_image": "https://www.ryans.com/storage/products/small/asus-expertbook-b1-b1502cva-13th-gen-intel-core-11724320243.webp",
+        "category": "Laptop",
+        "price": 1200.00,
+        "description": "High-performance laptop with a 15-inch Retina Display for professionals.",
+        "Specification": ["16GB RAM", "512GB SSD", "Intel Core i7"],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "L002",
+        "product_title": "Laptop Air 13",
+        "product_image": "https://www.ryans.com/storage/products/small/dell-latitude-3430-intel-core-i7-1255u-8gb-ram-11709443672.webp",
+        "category": "Laptop",
+        "price": 999.99,
+        "description": "Lightweight laptop with a 13-inch Retina Display, perfect for on-the-go use.",
+        "Specification": ["8GB RAM", "256GB SSD", "M1 Chip"],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "L003",
+        "product_title": "Gaming Laptop G5",
+        "product_image": "https://www.ryans.com/storage/products/small/chuwi-corebook-xpro-12th-gen-intel-core-i5-12450h-11727182800.webp",
+        "category": "Laptop",
+        "price": 1500.00,
+        "description": "High-performance gaming laptop with advanced graphics capabilities.",
+        "Specification": ["16GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "L004",
+        "product_title": "Business Laptop Elite",
+        "product_image": "https://www.ryans.com/storage/products/small/apple-macbook-air-2022-apple-m2-chip-8gb-ram-11708839214.webp",
+        "category": "Laptop",
+        "price": 1300.00,
+        "description": "Reliable laptop designed for business professionals.",
+        "Specification": ["Intel Core i5", "512GB SSD", "14-inch Display"],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "L005",
+        "product_title": "Convertible Laptop X2",
+        "product_image": "https://www.ryans.com/storage/products/small/gigabyte-gaming-g5-mf5-intel-core-i7-13620h-16gb-11711969375.webp",
+        "category": "Laptop",
+        "price": 1100.00,
+        "description": "2-in-1 laptop with a touchscreen and stylus support.",
+        "Specification": ["8GB RAM", "256GB SSD", "360° Hinge"],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "L006",
+        "product_title": "Laptop Mini 11",
+        "product_image": "https://www.ryans.com/storage/products/small/chuwi-gemibook-plus-intel-core-n100-8gb-ram-256gb-11703576117.webp",
+        "category": "Laptop",
+        "price": 850.00,
+        "description": "Compact laptop with a powerful processor, ideal for students.",
+        "Specification": ["4GB RAM", "128GB SSD", "Intel Core i3"],
+        "availability": true,
+        "rating": 4.3
+    },
+    {
+        "product_id": "P001",
+        "product_title": "Smartphone X",
+        "product_image": "https://www.mobiledokan.com/media/xiaomi-15-silver-official-image.webp",
+        "category": "Phone",
+        "price": 699.99,
+        "description": "Latest smartphone with an advanced camera and excellent battery life.",
+        "Specification": ["128GB Storage", "5G Connectivity", "Triple Camera"],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "P002",
+        "product_title": "Phone Z Lite",
+        "product_image": "https://www.mobiledokan.com/media/infinix-hot-50-pro-4g-glacier-blue-official-image.webp",
+        "category": "Phone",
+        "price": 499.99,
+        "description": "Affordable phone with essential features and solid performance.",
+        "Specification": ["64GB Storage", "Dual Camera", "Long Battery Life"],
+        "availability": true,
+        "rating": 4.5
+    },
+    {
+        "product_id": "P003",
+        "product_title": "Smartphone Ultra 5G",
+        "product_image": "https://www.mobiledokan.com/media/xiaomi-14t-pro-titan-blue-official-image.webp",
+        "category": "Phone",
+        "price": 899.99,
+        "description": "Premium 5G smartphone with a high-resolution display and superior camera.",
+        "Specification": ["256GB Storage", "6.7-inch Display", "Quad Camera"],
+        "availability": true,
+        "rating": 4.8
+    },
+    {
+        "product_id": "A001",
+        "product_title": "Wireless Earbuds",
+        "product_image": "https://gadgetbd.com/wp-content/uploads/2024/09/AirPods_4_PDP_Image_Position_1__GBEN_ce00fb6f-98d5-41f8-bb68-4914a196dcd2.jpg",
+        "category": "Accessories",
+        "price": 129.99,
+        "description": "Compact and comfortable wireless earbuds with noise cancellation.",
+        "Specification": ["Bluetooth 5.1", "20-hour Battery Life", "IPX5 Waterproof"],
+        "availability": true,
+        "rating": 4.6
+    },
+    {
+        "product_id": "A002",
+        "product_title": "Portable Charger",
+        "product_image": "https://gadgetbd.com/wp-content/uploads/2024/09/AirPods_4_PDP_Image_Position_1__GBEN_ce00fb6f-98d5-41f8-bb68-4914a196dcd2.jpg",
+        "category": "Accessories",
+        "price": 39.99,
+        "description": "High-capacity portable charger to keep your devices powered on the go.",
+        "Specification": ["10,000mAh Capacity", "Dual USB Output", "Fast Charging"],
+        "availability": true,
+        "rating": 4.4
+    },
+    {
+        "product_id": "A003",
+        "product_title": "Phone Case",
+        "product_image": "https://gadgetbd.com/wp-content/uploads/2024/07/Samsung-Galaxy-Buds-3-Pro-Wireless-Earbuds-Grey.jpg",
+        "category": "Accessories",
+        "price": 19.99,
+        "description": "Durable phone case with shock absorption and a slim profile.",
+        "Specification": ["Shock Absorbent", "Scratch Resistant", "Lightweight"],
+        "availability": true,
+        "rating": 4.5
+    }
+]
