@@ -1,15 +1,22 @@
 import React from 'react';
 import Banner from '../components/Banner/Banner';
 import SideBar from '../components/SideBar/SideBar';
-import { useLoaderData } from 'react-router-dom';
+import { Outlet, useLoaderData } from 'react-router-dom';
+
 
 const Home = () => {
     const data = useLoaderData();
-    console.log(data);
     return (
         <div>
             <Banner></Banner>
-            <SideBar categories={data}></SideBar>
+            <div className="lg:flex gap-10 w-11/12 mx-auto py-32">
+                <div className="lg:w-[20%] md:w-[40%] mx-auto mb-10 lg:mb-0">
+                    <SideBar categories={data}></SideBar>
+                </div>
+                <div className="lg:w-[80%]">
+                    <Outlet></Outlet>
+                </div>
+            </div>
         </div>
     );
 };
