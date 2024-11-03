@@ -3,9 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-base-200 text-base-content rounded p-10">
+      <footer className="bg-base-200 text-base-content rounded p-4 sm:p-10">
         <div className="border-b-2 w-full">
-          <h2 className="font-bold text-4xl text-center my-4">Gadget Heaven</h2>
+          <h2 className="font-bold text-2xl sm:text-4xl text-center my-4">Gadget Heaven</h2>
           <p className="text-center mb-10">
             Leading the way in cutting-edge technology and innovation.
           </p>

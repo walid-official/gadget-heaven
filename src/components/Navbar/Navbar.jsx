@@ -29,17 +29,17 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content t bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
                 <NavLink to="/" className="font-medium  md:text-white text-[#9538E2]">Home</NavLink>
-                <NavLink to="/" className="font-medium  md:text-white text-[#9538E2]">Statistics</NavLink>
-                <NavLink to="/" className="font-medium  md:text-white text-[#9538E2]">Dashboard</NavLink>
+                <NavLink to="/statistics" className="font-medium  md:text-white text-[#9538E2]">Statistics</NavLink>
+                <NavLink to="/Dashboard" className="font-medium  md:text-white text-[#9538E2]">Dashboard</NavLink>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl sm:text-2xl text-white">Gadget Heaven</a>
+          <a className="btn btn-ghost text-[16px] sm:text-2xl text-white">Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 space-x-6">
             <NavLink to="/" className="font-medium text-white">Home</NavLink>
-            <NavLink to="/" className="font-medium text-white">Statistics</NavLink>
-            <NavLink to="/" className="font-medium text-white">Dashboard</NavLink>
+            <NavLink to="/statistics" className="font-medium text-white">Statistics</NavLink>
+            <NavLink to="/Dashboard" className="font-medium text-white">Dashboard</NavLink>
           </ul>
         </div>
         <div className="navbar-end space-x-3">
@@ -49,7 +49,7 @@ const Navbar = () => {
             </div>
             <div className="sm:hidden flex">
                 <details className="dropdown">
-                    <summary className="text-white">Menu</summary>
+                    <summary className="text-white text-[16px] font-medium">Menu</summary>
                     <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] p-2 shadow">
                     <a href="" className="text-xl bg-white w-10 h-10 rounded-full flex justify-center items-center"><IoCartOutline/></a>
                     <a href="" className=" bg-white w-10 h-10 rounded-full flex justify-center items-center"><i class="fa-regular fa-heart"></i></a>
