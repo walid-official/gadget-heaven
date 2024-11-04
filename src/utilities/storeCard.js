@@ -10,15 +10,15 @@ const getGadgetList = () => {
 }
 
 const addGadgetToCart = (card) => {
-    const addGadget = getGadgetList();
-        const isExist = addGadget.find(item => item.id === item.id);
-        if(isExist){
-            alert("This Item is added")
-        }else{
-            addGadget.push(card)
-            const storedListGadget = JSON.stringify(addGadget);
-            localStorage.setItem('gadget-list',storedListGadget)
-        }
+    const addGadgets = getGadgetList();
+    console.log(addGadgets);
+        const isExist = addGadgets.find(item => item.product_id == card.product_id);
+        if(isExist) return  alert("This Item is added")
+  
+        addGadgets.push(card)
+        const storedListGadget = JSON.stringify(addGadgets);
+        localStorage.setItem('gadget-list',storedListGadget)
+        
 }
 
 export {addGadgetToCart,getGadgetList}

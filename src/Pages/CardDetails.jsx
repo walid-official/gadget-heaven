@@ -1,15 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import HeaderTitle from "../components/HeaderTitle/HeaderTitle";
 import Specification from "../components/Specification/Specification";
 import { IoCartOutline } from "react-icons/io5";
 import { addGadgetToCart } from "../utilities/storeCard";
+import { dataContext, priceContext} from "../Layout/Main";
+
+
 
 const CardDetails = () => {
   const details = useLoaderData();
   const { CardId } = useParams();
   console.log(CardId);
   const [detailsItem, setDetailsItem] = useState([]);
+  const [cartCount, setCartCount] = useContext(dataContext);
+ const [priceItem, setPrice] = useContext(priceContext)
+
 
   useEffect(() => {
     const detailsData = details.find(
@@ -31,8 +37,14 @@ const CardDetails = () => {
     rating,
   } = detailsItem;
 
-  const handleAddToCart = (id) => {
-    addGadgetToCart(id)
+  const handleAddToCart = (detailsItem,price) => {
+    addGadgetToCart(detailsItem)
+
+    const newCount = cartCount + 1;
+    setCartCount(newCount);
+
+    const newPrice = priceItem + price;
+    setPrice(newPrice)
   }
 
  
@@ -140,7 +152,7 @@ const CardDetails = () => {
               
             </div>
             <div className="flex gap-4 items-center">
-              <button onClick={() => handleAddToCart(detailsItem)} className="btn bg-[#9538E2] text-white">
+              <button onClick={() => handleAddToCart(detailsItem,price)} className="btn bg-[#9538E2] text-white">
                 Add to cart
                 <a href="" className="text-xl text-white">
                   <IoCartOutline />
