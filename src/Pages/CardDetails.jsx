@@ -3,12 +3,23 @@ import { useLoaderData, useParams } from "react-router-dom";
 import HeaderTitle from "../components/HeaderTitle/HeaderTitle";
 import Specification from "../components/Specification/Specification";
 import { IoCartOutline } from "react-icons/io5";
+import { addGadgetToCart } from "../utilities/storeCard";
 
 const CardDetails = () => {
   const details = useLoaderData();
   const { CardId } = useParams();
   console.log(CardId);
   const [detailsItem, setDetailsItem] = useState([]);
+
+  useEffect(() => {
+    const detailsData = details.find(
+      (singleItem) => singleItem.product_id === CardId
+    );
+    setDetailsItem(detailsData);
+    console.log(detailsData);
+  }, [details, CardId]);
+
+
   const {
     product_id,
     product_image,
@@ -19,20 +30,21 @@ const CardDetails = () => {
     availability,
     rating,
   } = detailsItem;
-  useEffect(() => {
-    const detailsData = details.find(
-      (singleItem) => singleItem.product_id === CardId
-    );
-    setDetailsItem(detailsData);
-    console.log(detailsData);
-  }, [details, CardId]);
 
+  const handleAddToCart = (id) => {
+    addGadgetToCart(id)
+  }
+
+ 
   return (
     <div>
-      <HeaderTitle
-        heading="Product Details"
-        title="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
-      ></HeaderTitle>
+      <div className="bg-[#9538E2] pt-8 pb-48">
+        <HeaderTitle
+          heading="Product Details"
+          title="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
+        ></HeaderTitle>
+      </div>
+      
 
       <div className="w-[70%] mx-auto -mt-40 pb-20">
         <div className="flex bg-base-100 shadow-xl rounded-xl">
@@ -128,7 +140,7 @@ const CardDetails = () => {
               
             </div>
             <div className="flex gap-4 items-center">
-              <button className="btn bg-[#9538E2] text-white">
+              <button onClick={() => handleAddToCart(detailsItem)} className="btn bg-[#9538E2] text-white">
                 Add to cart
                 <a href="" className="text-xl text-white">
                   <IoCartOutline />

@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/Dashboard',
-            element: <DashBoard/>
+            element: <DashBoard/>,
         },
         {
             path: 'cardDetails/:CardId',
