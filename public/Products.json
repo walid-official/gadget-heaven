@@ -6,7 +6,7 @@
         "category": "Laptop",
         "price": 1200.00,
         "description": "High-performance laptop with a 15-inch Retina Display for professionals.",
-        "Specification": ["16GB RAM", "512GB SSD", "Intel Core i7"],
+        "Specifications": ["16GB RAM", "512GB SSD", "Intel Core i7"],
         "availability": true,
         "rating": 4.8
     },
@@ -17,7 +17,7 @@
         "category": "Laptop",
         "price": 999.99,
         "description": "Lightweight laptop with a 13-inch Retina Display, perfect for on-the-go use.",
-        "Specification": ["8GB RAM", "256GB SSD", "M1 Chip"],
+        "Specifications": ["8GB RAM", "256GB SSD", "M1 Chip"],
         "availability": true,
         "rating": 4.7
     },
@@ -28,8 +28,8 @@
         "category": "Laptop",
         "price": 1500.00,
         "description": "High-performance gaming laptop with advanced graphics capabilities.",
-        "Specification": ["16GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
-        "availability": true,
+        "Specifications": ["16GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
+        "availability": false,
         "rating": 4.6
     },
     {
@@ -39,7 +39,7 @@
         "category": "Laptop",
         "price": 1300.00,
         "description": "Reliable laptop designed for business professionals.",
-        "Specification": ["Intel Core i5", "512GB SSD", "14-inch Display"],
+        "Specifications": ["Intel Core i5", "512GB SSD", "14-inch Display"],
         "availability": true,
         "rating": 4.5
     },
@@ -50,7 +50,7 @@
         "category": "Laptop",
         "price": 1100.00,
         "description": "2-in-1 laptop with a touchscreen and stylus support.",
-        "Specification": ["8GB RAM", "256GB SSD", "360° Hinge"],
+        "Specifications": ["8GB RAM", "256GB SSD", "360° Hinge"],
         "availability": true,
         "rating": 4.4
     },
@@ -61,7 +61,7 @@
         "category": "Laptop",
         "price": 850.00,
         "description": "Compact laptop with a powerful processor, ideal for students.",
-        "Specification": ["4GB RAM", "128GB SSD", "Intel Core i3"],
+        "Specifications": ["4GB RAM", "128GB SSD", "Intel Core i3"],
         "availability": true,
         "rating": 4.3
     },
@@ -72,7 +72,7 @@
         "category": "Phone",
         "price": 699.99,
         "description": "Latest smartphone with an advanced camera and excellent battery life.",
-        "Specification": ["128GB Storage", "5G Connectivity", "Triple Camera"],
+        "Specifications": ["128GB Storage", "5G Connectivity", "Triple Camera"],
         "availability": true,
         "rating": 4.7
     },
@@ -83,7 +83,7 @@
         "category": "Phone",
         "price": 499.99,
         "description": "Affordable phone with essential features and solid performance.",
-        "Specification": ["64GB Storage", "Dual Camera", "Long Battery Life"],
+        "Specifications": ["64GB Storage", "Dual Camera", "Long Battery Life"],
         "availability": true,
         "rating": 4.5
     },
@@ -94,7 +94,7 @@
         "category": "Phone",
         "price": 899.99,
         "description": "Premium 5G smartphone with a high-resolution display and superior camera.",
-        "Specification": ["256GB Storage", "6.7-inch Display", "Quad Camera"],
+        "Specifications": ["256GB Storage", "6.7-inch Display", "Quad Camera"],
         "availability": true,
         "rating": 4.8
     },
@@ -105,7 +105,7 @@
         "category": "Accessories",
         "price": 129.99,
         "description": "Compact and comfortable wireless earbuds with noise cancellation.",
-        "Specification": ["Bluetooth 5.1", "20-hour Battery Life", "IPX5 Waterproof"],
+        "Specifications": ["Bluetooth 5.1", "20-hour Battery Life", "IPX5 Waterproof"],
         "availability": true,
         "rating": 4.6
     },
@@ -116,8 +116,8 @@
         "category": "Accessories",
         "price": 39.99,
         "description": "High-capacity portable charger to keep your devices powered on the go.",
-        "Specification": ["10,000mAh Capacity", "Dual USB Output", "Fast Charging"],
-        "availability": true,
+        "Specifications": ["10,000mAh Capacity", "Dual USB Output", "Fast Charging"],
+        "availability": false,
         "rating": 4.4
     },
     {
@@ -127,7 +127,7 @@
         "category": "Accessories",
         "price": 19.99,
         "description": "Durable phone case with shock absorption and a slim profile.",
-        "Specification": ["Shock Absorbent", "Scratch Resistant", "Lightweight"],
+        "Specifications": ["Shock Absorbent", "Scratch Resistant", "Lightweight"],
         "availability": true,
         "rating": 4.5
     }
