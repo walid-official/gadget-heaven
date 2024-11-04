@@ -4,10 +4,6 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const DashBoard = () => {
 
-
-
-
-
   return (
     <div className="">
 
@@ -19,15 +15,15 @@ const DashBoard = () => {
           title="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
         ></HeaderTitle>
         <div className="flex gap-3 justify-center py-6">
-          <NavLink to="cart">
-            <button className="btn bg-transparent px-10 py-2 rounded-full font-bold border border-white text-white hover:bg-white hover:text-[#9538E2]">
+          <NavLink to="cart" className={({isActive}) => `btn bg-transparent px-10 py-2 rounded-full font-bold border border-white ${isActive ? 'bg-white text-[#9538E2]' : 'text-white'}`}>
+           
               Cart
-            </button>
+        
           </NavLink>
-          <NavLink to="wishlist">
-            <button className="btn bg-transparent px-10 py-2 rounded-full font-bold border border-white text-white hover:bg-white hover:text-[#9538E2]">
+          <NavLink to="wishlist" className={({isActive}) => `btn bg-transparent px-10 py-2 rounded-full font-bold border border-white ${isActive ? 'bg-white text-[#9538E2]' : 'text-white'}`}>
+          
               Wishlist
-            </button>
+
           </NavLink>
         </div>
       </div>

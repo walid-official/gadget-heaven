@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 const Navbar = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <div className="">
       
-      <div className={`navbar ${pathname === '/' ||  pathname === '/cart' ? "text-white" : "text-black"} w-11/12 mx-auto`}>
+      <div className={`navbar ${pathname === '/' ? "text-white" : ""}  w-11/12 mx-auto`}>
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost  lg:hidden">
@@ -36,13 +36,15 @@ const Navbar = () => {
                 <NavLink to="/Dashboard" className="font-medium   text-[#9538E2]">Dashboard</NavLink>
             </ul>
           </div>
-          <a className="btn btn-ghost text-[16px] sm:text-2xl ">Gadget Heaven</a>
+          <a className={`btn btn-ghost text-[18px] sm:text-2xl   ${pathname === '/Dashboard' || pathname === '/statistics' ||  pathname === '/Dashboard/cart' || pathname === '/Dashboard/wishlist' ?  "text-black" : "text-white"}`}>Gadget Heaven</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 space-x-6">
-            <NavLink to="/" className="font-medium ">Home</NavLink>
-            <NavLink to="/statistics" className="font-medium ">Statistics</NavLink>
-            <NavLink to="/Dashboard" className="font-medium ">Dashboard</NavLink>
+          <ul className="menu menu-horizontal px-1 space-x-6 text-white">
+            <NavLink to="/" className={({isActive}) => `${pathname === '/Dashboard' || pathname === '/statistics' ||  pathname === '/Dashboard/cart' || pathname === '/Dashboard/wishlist' ?  "text-[#9538E2]" : ""} ${isActive ? 'font-bold' : ''}`}>Home</NavLink>
+
+            <NavLink to="/statistics" className={({isActive}) => `${pathname === '/Dashboard' || pathname === '/statistics' ||  pathname === '/Dashboard/cart' || pathname === '/Dashboard/wishlist' ? "text-[#9538E2]" : ''} ${isActive ? 'font-bold' : ''}`}>Statistics</NavLink>
+
+            <NavLink to="/Dashboard" className={({isActive}) => `${pathname === '/Dashboard' || pathname === '/statistics' ||  pathname === '/Dashboard/cart' || pathname === '/Dashboard/wishlist' ? "text-[#9538E2]" : ''}  ${isActive ? 'font-bold' : ''}`}>Dashboard</NavLink>
           </ul>
         </div>
         <div className="navbar-end space-x-3">
