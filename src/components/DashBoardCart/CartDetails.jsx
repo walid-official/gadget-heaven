@@ -1,6 +1,6 @@
 import React from "react";
-
-const CartDetails = ({ cart }) => {
+import { IoCloseCircleOutline } from "react-icons/io5";
+const CartDetails = ({ cart,handleRemoveCart }) => {
   console.log(cart);
   const {
     product_id,
@@ -28,7 +28,7 @@ const CartDetails = ({ cart }) => {
           </div>
         </div>
         <div className="flex items-center px-8">
-            <button className="btn">Close</button>
+            <i onClick={() => handleRemoveCart(product_id)}  className="text-red-300 text-4xl"><IoCloseCircleOutline></IoCloseCircleOutline></i>
         </div>
       </div>
     </div>

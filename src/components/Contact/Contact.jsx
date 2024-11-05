@@ -1,9 +1,15 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { SiSimilarweb } from "react-icons/si";
-
+import favIcon from '../../assets/assets/favicon-16x16.png'
 const Contact = () => {
   return (
     <div className="w-[65%] mx-auto">
+       <Helmet>
+              <meta charSet="utf-8" />
+              <title>Contact - gadget</title>
+              <link rel="canonical" href={favIcon} />
+        </Helmet>
       <h2 className="text-center font-bold text-4xl py-10">Have Some Questions?</h2>
       <div className="flex ">
         <div className="bg-gradient-to-b from-[#9538e2] to-[#49279d] w-[50%] py-6 px-8 shadow-2xl rounded-lg">

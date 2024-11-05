@@ -11,7 +11,10 @@ const WishList = () => {
     },[])
 
     return (
-        <div>
+        <div className='w-11/12 mx-auto'>
+            <div className="">
+                <h2 className='font-bold text-2xl py-8'>WishList</h2>
+            </div>
             {
                 favorites.map(favorite => <ShowWishList favorite={favorite}></ShowWishList>)
             }

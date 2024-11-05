@@ -22,6 +22,16 @@ const addGadgetToCart = (card) => {
 
 
 
+const removeCartGadget = (id) => {
+    const cartsRemove = getGadgetList();
+    const remainCart = cartsRemove.filter(removeItem => removeItem.product_id != id);
+    const storedRemoveGadget = JSON.stringify(remainCart);
+    localStorage.setItem('gadget-list',storedRemoveGadget); 
+    toast.success('Successfully removed form Cart');
+   }
+
+
+
 
 
 
@@ -39,7 +49,7 @@ const getGadgetFavoriteList = () => {
 const addGadgetToFavorite = (favorite) => {
     const addFavorites = getGadgetFavoriteList();
         const isExist = addFavorites.find(item => item.product_id == favorite.product_id);
-        if(isExist) return  alert("This Item is added")
+        if(isExist) return   toast.error(' This Item in Favorite is already exist')
   
         addFavorites.push(favorite)
         const storedListFavorites = JSON.stringify(addFavorites);
@@ -48,5 +58,5 @@ const addGadgetToFavorite = (favorite) => {
 }
 
 
-
-export {addGadgetToCart,getGadgetList,getGadgetFavoriteList,addGadgetToFavorite}
+ 
+export {addGadgetToCart,getGadgetList,removeCartGadget,getGadgetFavoriteList,addGadgetToFavorite}

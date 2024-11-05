@@ -8,7 +8,7 @@
         "description": "High-performance laptop with a 15-inch Retina Display for professionals.",
         "Specifications": ["16GB RAM", "512GB SSD", "Intel Core i7"],
         "availability": true,
-        "rating": 4.8
+        "rating": 4.5
     },
     {
         "product_id": "L002",
@@ -19,7 +19,7 @@
         "description": "Lightweight laptop with a 13-inch Retina Display, perfect for on-the-go use.",
         "Specifications": ["8GB RAM", "256GB SSD", "M1 Chip"],
         "availability": true,
-        "rating": 4.7
+        "rating": 4.5
     },
     {
         "product_id": "L003",
@@ -30,7 +30,7 @@
         "description": "High-performance gaming laptop with advanced graphics capabilities.",
         "Specifications": ["16GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
         "availability": false,
-        "rating": 4.6
+        "rating": 4.5
     },
     {
         "product_id": "L004",
@@ -52,7 +52,7 @@
         "description": "2-in-1 laptop with a touchscreen and stylus support.",
         "Specifications": ["8GB RAM", "256GB SSD", "360° Hinge"],
         "availability": true,
-        "rating": 4.4
+        "rating": 4.5
     },
     {
         "product_id": "L006",
@@ -63,7 +63,7 @@
         "description": "Compact laptop with a powerful processor, ideal for students.",
         "Specifications": ["4GB RAM", "128GB SSD", "Intel Core i3"],
         "availability": true,
-        "rating": 4.3
+        "rating": 4.5
     },
     {
         "product_id": "P001",
@@ -74,7 +74,7 @@
         "description": "Latest smartphone with an advanced camera and excellent battery life.",
         "Specifications": ["128GB Storage", "5G Connectivity", "Triple Camera"],
         "availability": true,
-        "rating": 4.7
+        "rating": 4.5
     },
     {
         "product_id": "P002",
@@ -96,7 +96,7 @@
         "description": "Premium 5G smartphone with a high-resolution display and superior camera.",
         "Specifications": ["256GB Storage", "6.7-inch Display", "Quad Camera"],
         "availability": true,
-        "rating": 4.8
+        "rating": 4.5
     },
     {
         "product_id": "A001",
@@ -107,7 +107,7 @@
         "description": "Compact and comfortable wireless earbuds with noise cancellation.",
         "Specifications": ["Bluetooth 5.1", "20-hour Battery Life", "IPX5 Waterproof"],
         "availability": true,
-        "rating": 4.6
+        "rating": 4.5
     },
     {
         "product_id": "A002",
@@ -118,7 +118,7 @@
         "description": "High-capacity portable charger to keep your devices powered on the go.",
         "Specifications": ["10,000mAh Capacity", "Dual USB Output", "Fast Charging"],
         "availability": false,
-        "rating": 4.4
+        "rating": 4.5
     },
     {
         "product_id": "A003",

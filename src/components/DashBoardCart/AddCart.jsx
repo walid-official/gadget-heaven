@@ -1,13 +1,13 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { getGadgetList } from "../../utilities/storeCard";
+import { getGadgetList, removeCartGadget } from "../../utilities/storeCard";
 import CartDetails from "./CartDetails";
 import { priceContext } from "../../Layout/Main";
 import modalImage from "../../assets/assets/Group.png";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const AddCart = () => {
   const [carts, setCarts] = useState([]);
-  const {priceItem,resetItems,setResetItems} = useContext(priceContext);
+  const {priceItem,resetItems,setResetItems,modalBtnDisable,setModalBtnDisable} = useContext(priceContext);
   const navigate = useNavigate();
 
 
@@ -25,15 +25,31 @@ const AddCart = () => {
     setCarts(cartList);
   }, [resetItems]);
 
+useEffect(()=> {
+  if(priceItem > 0){
+    setModalBtnDisable(false)
+  }
+},[priceItem])
+
+
   const handleSorting = () => {
     const sortingPrice = [...carts].sort((a, b) => b.price - a.price);
     setCarts(sortingPrice);
   };
 
-  const handlePurchase = () => {
+  const handleRemoveCart = (id) => {
+    removeCartGadget(id)
+    const cartList = getGadgetList();
+    setCarts(cartList);
+  }
 
+
+  const handlePurchase = () => {
     document.getElementById("my_modal_1").showModal();
   };
+
+
+
 
   return (
     <div>
@@ -44,7 +60,7 @@ const AddCart = () => {
           </div>
           <div className="flex gap-4 items-center">
             {
-                !resetItems ?  <p className="py-3">Total = $ {priceItem}</p> : " Total = $ 00"
+                !resetItems ?  <p className="py-3 font-bold text-xl">Total = $ {priceItem}</p> : " Total = $ 00"
             }
             <button
               onClick={handleSorting}
@@ -54,7 +70,7 @@ const AddCart = () => {
             </button>
             <button
               onClick={handlePurchase}
-              className="btn bg-[#9538E2] shadow-inner rounded-full text-white"
+              className="btn px-6 py-2 bg-[#9538E2] shadow-inner rounded-full text-white"
             >
               Purchase
             </button>
@@ -63,8 +79,8 @@ const AddCart = () => {
         {
         !resetItems ? 
         carts.map((cart, index) => (
-          <CartDetails key={index} cart={cart}></CartDetails> 
-        )) : "Content is Empty" 
+          <CartDetails key={index} handleRemoveCart={handleRemoveCart} cart={cart}></CartDetails> 
+        )) : <h2 className="font-bold flex items-center justify-center h-60 text-3xl">Cart is Empty</h2> 
         
         }
       </div>
@@ -80,13 +96,13 @@ const AddCart = () => {
           
           <p className="py-4">Thanks For Purchasing</p>
           {
-            !resetItems ?  <p className="py-3">Total = $ {priceItem}</p> : " Total = $ 00"  
+            !resetItems ?  <p className="py-3">Total = $ {priceItem}</p> : "Total = $ 00"  
           }
          
           <div className="">
             <form method="" className="text-center">
               {/* if there is a button in form, it will close the modal */}
-              <button onClick={handleNavigate} className="btn w-full rounded-full">
+              <button disabled={modalBtnDisable} onClick={handleNavigate} className="btn w-full rounded-full">
                 Close
               </button>
             </form>

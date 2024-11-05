@@ -2,12 +2,13 @@ import React, { useContext, useState } from "react";
 import { NavLink, useLocation, useParams } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
-import { dataContext } from "../../Layout/Main";
+import { dataContext, priceContext } from "../../Layout/Main";
 // export const dataContext = createContext();
 
 const Navbar = () => {
   const { pathname } = useLocation();
-  const { cartCount, favoriteCount } = useContext(dataContext);
+  const { cartCount, favoriteCount} = useContext(dataContext);
+  const {resetItems,setResetItems } = useContext(priceContext);
 
   return (
     <div className="">
@@ -78,7 +79,7 @@ const Navbar = () => {
                   pathname === "/Dashboard/wishlist"
                     ? "text-[#9538E2]"
                     : ""
-                } ${isActive ? "font-bold" : ""}`
+                } ${isActive ? "font-bold border-b-2" : ""}`
               }
             >
               Home
@@ -94,7 +95,7 @@ const Navbar = () => {
                   pathname === "/Dashboard/wishlist"
                     ? "text-[#9538E2]"
                     : ""
-                } ${isActive ? "font-bold" : ""}`
+                } ${isActive ? "font-bold border-b-2" : ""}`
               }
             >
               Statistics
@@ -110,7 +111,7 @@ const Navbar = () => {
                   pathname === "/Dashboard/wishlist"
                     ? "text-[#9538E2]"
                     : ""
-                }  ${isActive ? "font-bold" : ""}`
+                }  ${isActive ? "font-bold border-b-2" : ""}`
               }
             >
               Dashboard
@@ -126,7 +127,7 @@ const Navbar = () => {
                   pathname === "/Dashboard/wishlist"
                     ? "text-[#9538E2]"
                     : ""
-                }  ${isActive ? "font-bold" : ""}`
+                }  ${isActive ? "font-bold border-b-2" : ""}`
               }
             >
               Contact Us
@@ -156,9 +157,14 @@ const Navbar = () => {
                       d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                     />
                   </svg>
+                 
                   <div className="bg-black w-6 h-6 text-sm -top-6 -right-5 absolute flex items-center justify-center rounded-full text-white">
-                    {cartCount}
+                    { 
+                      !resetItems ? cartCount : "0"
+                    }
+                     
                   </div>
+                  
                 </div>
               </div>
               <div

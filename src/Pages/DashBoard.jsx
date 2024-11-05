@@ -1,12 +1,17 @@
+import { Helmet } from "react-helmet";
 import AddCart from "../components/DashBoardCart/AddCart";
 import HeaderTitle from "../components/HeaderTitle/HeaderTitle";
 import { NavLink, Outlet } from "react-router-dom";
-
+import favIcon from '../assets/assets/favicon-16x16.png'
 const DashBoard = () => {
 
   return (
     <div className="">
-
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>Dashboard - gadget</title>
+                <link rel="canonical" href={favIcon} />
+          </Helmet>
       <div className="bg-[#9538E2] pt-8 pb-20">
         <HeaderTitle
           heading="DashBoard"

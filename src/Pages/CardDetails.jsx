@@ -4,18 +4,20 @@ import HeaderTitle from "../components/HeaderTitle/HeaderTitle";
 import Specification from "../components/Specification/Specification";
 import { IoCartOutline } from "react-icons/io5";
 import { addGadgetToCart, addGadgetToFavorite } from "../utilities/storeCard";
-import { dataContext, priceContext} from "../Layout/Main";
-
-
+import { dataContext, priceContext } from "../Layout/Main";
+import { Helmet } from "react-helmet";
+import favIcon from '../assets/assets/favicon-16x16.png'
+import { Rate } from "antd";
 
 const CardDetails = () => {
   const details = useLoaderData();
   const { CardId } = useParams();
   console.log(CardId);
   const [detailsItem, setDetailsItem] = useState([]);
-  const {cartCount, setCartCount,favoriteCount,setFavoriteCount} = useContext(dataContext);
-  const {priceItem, setPrice,resetItems} = useContext(priceContext)
-  const [favoriteDisable,setFavoriteDisable] = useState(false);
+  const { cartCount, setCartCount, favoriteCount, setFavoriteCount } =
+    useContext(dataContext);
+  const { priceItem, setPrice, resetItems,modalBtnDisable,setModalBtnDisable } = useContext(priceContext);
+  const [favoriteDisable, setFavoriteDisable] = useState(false);
 
   useEffect(() => {
     const detailsData = details.find(
@@ -24,7 +26,6 @@ const CardDetails = () => {
     setDetailsItem(detailsData);
     console.log(detailsData);
   }, [details, CardId]);
-
 
   const {
     product_id,
@@ -37,18 +38,17 @@ const CardDetails = () => {
     rating,
   } = detailsItem;
 
-
-
-  const handleAddToCart = (detailsItem,price) => {
-    
-      addGadgetToCart(detailsItem)
+  const handleAddToCart = (detailsItem, price) => {
+    addGadgetToCart(detailsItem);
 
     const newCount = cartCount + 1;
     setCartCount(newCount);
 
     const newPrice = priceItem + price;
-    setPrice(newPrice)
-  }
+    setPrice(newPrice);
+  };
+
+
 
 
   const handleAddToFavorite = (detailsItem) => {
@@ -57,20 +57,22 @@ const CardDetails = () => {
 
     const newFavorite = favoriteCount + 1;
     setFavoriteCount(newFavorite);
-  }
+  };
 
-
-
- 
   return (
     <div>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>CardDetails - gadget</title>
+        <link rel="canonical" href={favIcon} />
+      </Helmet>
+
       <div className="bg-[#9538E2] pt-8 pb-48">
         <HeaderTitle
           heading="Product Details"
           title="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
         ></HeaderTitle>
       </div>
-      
 
       <div className="w-[70%] mx-auto -mt-40 pb-20">
         <div className="flex bg-base-100 shadow-xl rounded-xl">
@@ -102,79 +104,27 @@ const CardDetails = () => {
               <h2 className="text-xl font-bold py-3">Rating</h2>
 
               <div className="flex gap-4 items-center py-6">
-                <div className="rating rating-md rating-half">
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="rating-hidden"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-1 bg-green-500"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-2 bg-green-500"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-1 bg-green-500"
-                   
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-2 bg-green-500"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-1 bg-green-500"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-2 bg-green-500"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-1 bg-green-500"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-2 bg-green-500"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-1 bg-green-500"
-                  />
-                  <input
-                    type="radio"
-                    name="rating-10"
-                    className="mask mask-star-2 mask-half-2 bg-green-500"
-                     defaultChecked
-                  />
-                </div>
+                
+                <Rate defaultValue={4.5} allowHalf allowClear={false} disabled></Rate>
+                
                 <button className="btn">{rating}</button>
               </div>
-              
             </div>
+            
             <div className="flex gap-4 items-center">
-              <button onClick={() => handleAddToCart(detailsItem,price)} className="btn bg-[#9538E2] text-white">
+              <button
+                onClick={() => handleAddToCart(detailsItem, price)}
+                className="btn bg-[#9538E2] text-white"
+              >
                 Add to cart
                 <i href="" className="text-xl text-white">
                   <IoCartOutline />
                 </i>
               </button>
-              <button  disabled={favoriteDisable}
+              <button
+                disabled={favoriteDisable}
                 onClick={() => handleAddToFavorite(detailsItem)}
-                className="btn bg-slate-400 w-12 h-12 rounded-full shadow-2xl flex justify-center items-center"
+                className="btn bg-white border-2 w-12 h-12 rounded-full shadow-2xl flex justify-center items-center"
               >
                 <i class="fa-regular fa-heart"></i>
               </button>
