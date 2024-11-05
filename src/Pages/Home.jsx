@@ -14,6 +14,9 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
+            <div className="">
+                <h2 className='text-center font-bold text-4xl pt-32'>Explore Cutting-Edge Gadgets</h2>
+            </div>
             <div className="lg:flex gap-10 w-11/12 mx-auto py-32">
                 <div className="lg:w-[20%] md:w-[40%] mx-auto mb-10 lg:mb-0">
                     <SideBar categories={data}></SideBar>
