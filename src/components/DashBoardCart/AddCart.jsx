@@ -3,22 +3,27 @@ import { getGadgetList } from "../../utilities/storeCard";
 import CartDetails from "./CartDetails";
 import { priceContext } from "../../Layout/Main";
 import modalImage from "../../assets/assets/Group.png";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const AddCart = () => {
   const [carts, setCarts] = useState([]);
-  const [priceItem] = useContext(priceContext);
+  const {priceItem,resetItems,setResetItems} = useContext(priceContext);
   const navigate = useNavigate();
+
+
 
   const handleNavigate = (event) => {
     event.preventDefault()
+    setResetItems(true)
     navigate('/')
   }
+
+
 
   useEffect(() => {
     const cartList = getGadgetList();
     setCarts(cartList);
-  }, []);
+  }, [resetItems]);
 
   const handleSorting = () => {
     const sortingPrice = [...carts].sort((a, b) => b.price - a.price);
@@ -38,7 +43,9 @@ const AddCart = () => {
             <h2 className="font-bold text-xl">Cart</h2>
           </div>
           <div className="flex gap-4 items-center">
-            <h2>Total-Cost: $ {priceItem}</h2>
+            {
+                !resetItems ?  <p className="py-3">Total = $ {priceItem}</p> : " Total = $ 00"
+            }
             <button
               onClick={handleSorting}
               className="rounded-full px-6 py-3 bg-transparent  hover:bg-[#9538E2] hover:text-white border border-[#9538E2] text-[#9538E2]"
@@ -53,9 +60,13 @@ const AddCart = () => {
             </button>
           </div>
         </div>
-        {carts.map((cart, index) => (
-          <CartDetails key={index} cart={cart}></CartDetails>
-        ))}
+        {
+        !resetItems ? 
+        carts.map((cart, index) => (
+          <CartDetails key={index} cart={cart}></CartDetails> 
+        )) : "Content is Empty" 
+        
+        }
       </div>
       {/* <Modal></Modal> */}
       <dialog id="my_modal_1" className="modal">
@@ -68,7 +79,10 @@ const AddCart = () => {
           </div>
           
           <p className="py-4">Thanks For Purchasing</p>
-          <p className="py-3">Total = $ {priceItem}</p>
+          {
+            !resetItems ?  <p className="py-3">Total = $ {priceItem}</p> : " Total = $ 00"  
+          }
+         
           <div className="">
             <form method="" className="text-center">
               {/* if there is a button in form, it will close the modal */}

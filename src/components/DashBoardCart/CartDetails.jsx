@@ -1,6 +1,7 @@
 import React from "react";
 
 const CartDetails = ({ cart }) => {
+  console.log(cart);
   const {
     product_id,
     product_image,

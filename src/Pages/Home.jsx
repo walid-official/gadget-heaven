@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import Banner from '../components/Banner/Banner';
 import SideBar from '../components/SideBar/SideBar';
 import { Outlet, useLoaderData } from 'react-router-dom';
+import { priceContext } from '../Layout/Main';
 
 
 const Home = () => {
     const data = useLoaderData();
+    // const {priceItem, setPrice,resetItems,setResetItems} = useContext(priceContext);
+    // useEffect(()=>{
+    //     setResetItems(false)
+    // },[])
     return (
         <div>
             <Banner></Banner>

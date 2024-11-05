@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 const getGadgetList = () => {
     const storeGadgetList = localStorage.getItem('gadget-list');
     if(storeGadgetList){
@@ -14,6 +16,7 @@ const addGadgetToCart = (card) => {
         addGadgets.push(card)
         const storedListGadget = JSON.stringify(addGadgets);
         localStorage.setItem('gadget-list',storedListGadget); 
+        toast.success('Successfully Added In Cart');
 }
 
 
@@ -40,7 +43,8 @@ const addGadgetToFavorite = (favorite) => {
   
         addFavorites.push(favorite)
         const storedListFavorites = JSON.stringify(addFavorites);
-        localStorage.setItem('favorite-list',storedListFavorites);     
+        localStorage.setItem('favorite-list',storedListFavorites);
+        toast.success('Successfully Added In Favorite');     
 }
 
 

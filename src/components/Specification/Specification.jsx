@@ -2,7 +2,7 @@ import React from 'react';
 
 const Specification = ({item}) => {
 
-    return  <li>{item}</li>
+    return  <li className='py-1'>{item}</li>
        
             
         

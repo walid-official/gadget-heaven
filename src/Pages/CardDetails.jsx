@@ -13,8 +13,8 @@ const CardDetails = () => {
   const { CardId } = useParams();
   console.log(CardId);
   const [detailsItem, setDetailsItem] = useState([]);
-  const [cartCount, setCartCount] = useContext(dataContext);
-  const [priceItem, setPrice] = useContext(priceContext)
+  const {cartCount, setCartCount,favoriteCount,setFavoriteCount} = useContext(dataContext);
+  const {priceItem, setPrice,resetItems} = useContext(priceContext)
   const [favoriteDisable,setFavoriteDisable] = useState(false);
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const CardDetails = () => {
     product_title,
     price,
     description,
-    Specifications = [],
+    Specifications,
     availability,
     rating,
   } = detailsItem;
@@ -40,7 +40,8 @@ const CardDetails = () => {
 
 
   const handleAddToCart = (detailsItem,price) => {
-    addGadgetToCart(detailsItem)
+    
+      addGadgetToCart(detailsItem)
 
     const newCount = cartCount + 1;
     setCartCount(newCount);
@@ -52,7 +53,10 @@ const CardDetails = () => {
 
   const handleAddToFavorite = (detailsItem) => {
     addGadgetToFavorite(detailsItem);
-    setFavoriteDisable(true)
+    setFavoriteDisable(true);
+
+    const newFavorite = favoriteCount + 1;
+    setFavoriteCount(newFavorite);
   }
 
 
@@ -89,7 +93,7 @@ const CardDetails = () => {
             </p>
             <p className="py-2">{description}</p>
             <h2 className="font-bold text-2xl py-4">Specifications:</h2>
-            <ol type="1">
+            <ol className="list-decimal pl-6">
               {Specifications?.map((item, index) => (
                 <Specification key={index} item={item}></Specification>
               ))}
