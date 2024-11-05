@@ -58,6 +58,7 @@ const Navbar = () => {
             className={`btn btn-ghost text-[18px] sm:text-2xl   ${
               pathname === "/Dashboard" ||
               pathname === "/statistics" ||
+              pathname === "/Contact" ||
               pathname === "/Dashboard/cart" ||
               pathname === "/Dashboard/wishlist"
                 ? "text-black"
@@ -75,6 +76,7 @@ const Navbar = () => {
                 `${
                   pathname === "/Dashboard" ||
                   pathname === "/statistics" ||
+                  pathname === "/Contact" ||
                   pathname === "/Dashboard/cart" ||
                   pathname === "/Dashboard/wishlist"
                     ? "text-[#9538E2]"
@@ -91,6 +93,7 @@ const Navbar = () => {
                 `${
                   pathname === "/Dashboard" ||
                   pathname === "/statistics" ||
+                  pathname === "/Contact" ||
                   pathname === "/Dashboard/cart" ||
                   pathname === "/Dashboard/wishlist"
                     ? "text-[#9538E2]"
@@ -107,6 +110,7 @@ const Navbar = () => {
                 `${
                   pathname === "/Dashboard" ||
                   pathname === "/statistics" ||
+                  pathname === "/Contact" ||
                   pathname === "/Dashboard/cart" ||
                   pathname === "/Dashboard/wishlist"
                     ? "text-[#9538E2]"
@@ -123,6 +127,7 @@ const Navbar = () => {
                 `${
                   pathname === "/Dashboard" ||
                   pathname === "/statistics" ||
+                  pathname === "/Contact" ||
                   pathname === "/Dashboard/cart" ||
                   pathname === "/Dashboard/wishlist"
                     ? "text-[#9538E2]"

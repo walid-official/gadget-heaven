@@ -34,6 +34,7 @@ const Main = () => {
         <Toaster />
           {pathname === "/Dashboard" ||
           pathname === "/statistics" ||
+          pathname === "/Contact" ||
           pathname === "/Dashboard/cart" ||
           pathname === "/Dashboard/wishlist" ? (
             <div className="bg-white py-4">
