@@ -21,7 +21,7 @@ const Statistics = () => {
               title="Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
             ></HeaderTitle>
             </div>
-            <div className="my-20">
+            <div className="py-20">
                 <ShowStatistics statisticsData={statisticsData}></ShowStatistics>
             </div>
         </div>

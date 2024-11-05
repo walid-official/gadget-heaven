@@ -14,8 +14,8 @@ import {
 
 const ShowStatistics = ({ statisticsData }) => {
   return (
-    <div className="">
-      <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto bg-white shadow-2xl rounded-xl">
+      <div className="p-8">
         <div style={{ width: "100%", height: 400 }}>
           <ResponsiveContainer width="100%" height="100%">
             <ComposedChart
