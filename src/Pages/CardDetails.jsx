@@ -3,7 +3,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import HeaderTitle from "../components/HeaderTitle/HeaderTitle";
 import Specification from "../components/Specification/Specification";
 import { IoCartOutline } from "react-icons/io5";
-import { addGadgetToCart } from "../utilities/storeCard";
+import { addGadgetToCart, addGadgetToFavorite } from "../utilities/storeCard";
 import { dataContext, priceContext} from "../Layout/Main";
 
 
@@ -14,8 +14,8 @@ const CardDetails = () => {
   console.log(CardId);
   const [detailsItem, setDetailsItem] = useState([]);
   const [cartCount, setCartCount] = useContext(dataContext);
- const [priceItem, setPrice] = useContext(priceContext)
-
+  const [priceItem, setPrice] = useContext(priceContext)
+  const [favoriteDisable,setFavoriteDisable] = useState(false);
 
   useEffect(() => {
     const detailsData = details.find(
@@ -37,6 +37,8 @@ const CardDetails = () => {
     rating,
   } = detailsItem;
 
+
+
   const handleAddToCart = (detailsItem,price) => {
     addGadgetToCart(detailsItem)
 
@@ -46,6 +48,14 @@ const CardDetails = () => {
     const newPrice = priceItem + price;
     setPrice(newPrice)
   }
+
+
+  const handleAddToFavorite = (detailsItem) => {
+    addGadgetToFavorite(detailsItem);
+    setFavoriteDisable(true)
+  }
+
+
 
  
   return (
@@ -154,16 +164,16 @@ const CardDetails = () => {
             <div className="flex gap-4 items-center">
               <button onClick={() => handleAddToCart(detailsItem,price)} className="btn bg-[#9538E2] text-white">
                 Add to cart
-                <a href="" className="text-xl text-white">
+                <i href="" className="text-xl text-white">
                   <IoCartOutline />
-                </a>
+                </i>
               </button>
-              <a
-                href=""
-                className=" bg-slate-400 w-10 h-10 rounded-full shadow-2xl flex justify-center items-center"
+              <button  disabled={favoriteDisable}
+                onClick={() => handleAddToFavorite(detailsItem)}
+                className="btn bg-slate-400 w-12 h-12 rounded-full shadow-2xl flex justify-center items-center"
               >
                 <i class="fa-regular fa-heart"></i>
-              </a>
+              </button>
             </div>
           </div>
         </div>

@@ -11,14 +11,38 @@ const getGadgetList = () => {
 
 const addGadgetToCart = (card) => {
     const addGadgets = getGadgetList();
-    console.log(addGadgets);
-        const isExist = addGadgets.find(item => item.product_id == card.product_id);
-        if(isExist) return  alert("This Item is added")
-  
         addGadgets.push(card)
         const storedListGadget = JSON.stringify(addGadgets);
-        localStorage.setItem('gadget-list',storedListGadget)
-        
+        localStorage.setItem('gadget-list',storedListGadget); 
 }
 
-export {addGadgetToCart,getGadgetList}
+
+
+
+
+
+
+const getGadgetFavoriteList = () => {
+    const storeFavoriteList = localStorage.getItem('favorite-list');
+    if(storeFavoriteList){
+        const FavoriteList = JSON.parse(storeFavoriteList);
+        return FavoriteList;
+    }
+    else{
+        return [];
+    }
+}
+
+const addGadgetToFavorite = (favorite) => {
+    const addFavorites = getGadgetFavoriteList();
+        const isExist = addFavorites.find(item => item.product_id == favorite.product_id);
+        if(isExist) return  alert("This Item is added")
+  
+        addFavorites.push(favorite)
+        const storedListFavorites = JSON.stringify(addFavorites);
+        localStorage.setItem('favorite-list',storedListFavorites);     
+}
+
+
+
+export {addGadgetToCart,getGadgetList,getGadgetFavoriteList,addGadgetToFavorite}

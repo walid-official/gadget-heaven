@@ -7,8 +7,6 @@ const DashBoard = () => {
   return (
     <div className="">
 
-
-
       <div className="bg-[#9538E2] pt-8 pb-20">
         <HeaderTitle
           heading="DashBoard"
@@ -21,9 +19,7 @@ const DashBoard = () => {
         
           </NavLink>
           <NavLink to="wishlist" className={({isActive}) => `btn bg-transparent px-10 py-2 rounded-full font-bold border border-white ${isActive ? 'bg-white text-[#9538E2]' : 'text-white'}`}>
-          
               Wishlist
-
           </NavLink>
         </div>
       </div>

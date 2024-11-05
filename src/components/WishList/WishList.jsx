@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getGadgetFavoriteList } from '../../utilities/storeCard';
+import ShowWishList from './ShowWishList';
 
 const WishList = () => {
+    const [favorites,setFavorites] = useState([]);
+
+    useEffect(() => {
+        const favoritesItem = getGadgetFavoriteList();
+        setFavorites(favoritesItem);
+    },[])
+
     return (
         <div>
-            <h2>This is a WishList Page</h2>
+            {
+                favorites.map(favorite => <ShowWishList favorite={favorite}></ShowWishList>)
+            }
         </div>
     );
 };
