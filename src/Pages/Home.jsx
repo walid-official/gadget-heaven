@@ -1,17 +1,19 @@
 import React, { useContext, useEffect } from 'react';
 import Banner from '../components/Banner/Banner';
 import SideBar from '../components/SideBar/SideBar';
-import { Outlet, useLoaderData } from 'react-router-dom';
+import { Outlet, useLoaderData, useLocation } from 'react-router-dom';
 import { priceContext } from '../Layout/Main';
 
 
 const Home = () => {
     const data = useLoaderData();
+    const location = useLocation();
     const {priceItem,resetItems,setResetItems,modalBtnDisable,setModalBtnDisable} = useContext(priceContext);
-    // useEffect(() => {
-        
-        
-    // },[])
+    useEffect(() => {
+        if(location.pathname === '/'){
+            setModalBtnDisable(true)
+        }
+    },[location])
     return (
         <div>
             <Banner></Banner>

@@ -7,16 +7,17 @@ import { useNavigate } from "react-router-dom";
 
 const AddCart = () => {
   const [carts, setCarts] = useState([]);
-  const {priceItem,resetItems,setResetItems,modalBtnDisable,setModalBtnDisable} = useContext(priceContext);
+  const {priceItem,setPrice,resetItems,setResetItems,modalBtnDisable,setModalBtnDisable} = useContext(priceContext);
   const navigate = useNavigate();
 
 
 
   const handleNavigate = (event) => {
     event.preventDefault()
-    navigate('/')
     setResetItems(true);
     clearCartGadgets();
+    setPrice(0)
+    navigate('/')
   }
 
 
@@ -57,11 +58,11 @@ useEffect(()=> {
   return (
     <div>
       <div className="w-11/12 mx-auto py-4">
-        <div className="flex justify-between">
+        <div className="sm:flex sm:justify-between text-center">
           <div className="">
             <h2 className="font-bold text-xl">Cart</h2>
           </div>
-          <div className="flex gap-4 items-center">
+          <div className="sm:flex gap-4 items-center">
             {
                 !resetItems ?  <p className="py-3 font-bold text-xl">Total = $ {priceItem}</p> : " Total = $ 00"
             }
@@ -108,9 +109,14 @@ useEffect(()=> {
           <div className="">
             <form method="" className="text-center">
               {/* if there is a button in form, it will close the modal */}
-              <button disabled={modalBtnDisable} onClick={handleNavigate} className="btn w-full rounded-full">
+              {
+                priceItem > 0 ?  <button  onClick={handleNavigate} className="btn w-full rounded-full">
+                Close
+              </button> :  <button disabled className="btn w-full rounded-full">
                 Close
               </button>
+              }
+             
             </form>
           </div>
         </div>

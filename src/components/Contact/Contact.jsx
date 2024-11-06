@@ -4,15 +4,15 @@ import { SiSimilarweb } from "react-icons/si";
 import favIcon from '../../assets/assets/favicon-16x16.png'
 const Contact = () => {
   return (
-    <div className="w-[65%] mx-auto">
+    <div className="lg:w-[65%] md:w-[90%] mx-auto">
        <Helmet>
               <meta charSet="utf-8" />
               <title>Contact - gadget</title>
               <link rel="canonical" href={favIcon} />
         </Helmet>
       <h2 className="text-center font-bold text-4xl py-10">Have Some Questions?</h2>
-      <div className="flex ">
-        <div className="bg-gradient-to-b from-[#9538e2] to-[#49279d] w-[50%] py-6 px-8 shadow-2xl rounded-lg">
+      <div className="lg:flex">
+        <div className="bg-gradient-to-b from-[#9538e2] to-[#49279d] lg:w-[50%] mx-auto w-[90%] py-6 px-8 shadow-2xl rounded-lg">
             <div className="">
                 <h2 className="font-medium text-white text-2xl py-6">Send us a message</h2>
             </div>
@@ -35,32 +35,32 @@ const Contact = () => {
             <button className="btn bg-gradient-to-b from-[#9538e2] to-[#49279d] rounded-full text-[#caa1dc]">Send Message</button>
           </div>
         </div>
-        <div className="bg-white w-[50%] rounded-lg shadow-2xl py-6 px-8">
+        <div className="bg-white lg:w-[50%] mx-auto w-[90%] rounded-lg shadow-2xl py-6 px-8">
             <h2 className="font-medium text-2xl py-6">Contact Us</h2>
             <p className="text-[#666679] w-[90%] pb-6">We're open for any suggestion or just to have a chat</p>
             <div className="space-y-8">
-                <div className="flex items-center gap-3">
+                <div className="sm:flex items-center gap-3">
                     <div className="bg-white  shadow-2xl border w-12 h-12 rounded-full flex justify-center items-center">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <span className="font-bold">Address:</span>
                     <a href=""> Suite 721 New York NY 10016</a>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="sm:flex items-center gap-3">
                     <div className="bg-white shadow-2xl border w-12 h-12 rounded-full flex justify-center items-center">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <span className="font-bold">Phone:</span>
                     <a href=""> + 1235 2355 98</a>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="sm:flex items-center gap-3">
                     <div className="bg-white shadow-2xl border w-12 h-12 rounded-full flex justify-center items-center">
                     <i class="fa-solid fa-paper-plane"></i>
                     </div>
                     <span className="font-bold">Email:</span>
                     <a href=""> info@yoursite.com</a>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="sm:flex items-center gap-3">
                     <div className="bg-white shadow-2xl border w-12 h-12 rounded-full flex justify-center items-center">
                         <SiSimilarweb></SiSimilarweb>
                     </div>

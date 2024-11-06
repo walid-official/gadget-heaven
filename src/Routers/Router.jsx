@@ -13,9 +13,8 @@ import Contact from "../components/Contact/Contact";
 const router = createBrowserRouter([
     {
       path: "/",
-      errorElement: <ErrorPage />,
       element: <Main />,
-      loader: () => fetch('../Categories.json'),
+      errorElement: <ErrorPage />,
       children: [
         {
             path: '/',

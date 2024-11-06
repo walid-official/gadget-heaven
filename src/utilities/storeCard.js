@@ -61,5 +61,16 @@ const addGadgetToFavorite = (favorite) => {
 }
 
 
+const removeFavoriteGadget = (id) => {
+    const favoritesRemove = getGadgetFavoriteList();
+    const remainFavorite = favoritesRemove.filter(removeFavoriteItem => removeFavoriteItem.product_id != id);
+    const storedRemoveFavorite = JSON.stringify(remainFavorite);
+    localStorage.setItem('favorite-list',storedRemoveFavorite); 
+    toast.success('Successfully removed form Cart');
+}
+
+
+
+
  
 export {addGadgetToCart,getGadgetList,removeCartGadget,getGadgetFavoriteList,addGadgetToFavorite,clearCartGadgets}

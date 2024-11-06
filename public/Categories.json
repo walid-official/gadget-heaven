@@ -1,17 +1,14 @@
 [
     {
       "id": 1,
-      "category": "Laptop",
-      "slug": "brewed-coffee"
+      "category": "Laptop"
     },
     {
       "id": 2,
-      "category": "Phone",
-      "slug": "iced-coffee"
+      "category": "Phone"
     },
     {
       "id": 3,
-      "category": "Accessories",
-      "slug": "dessert-coffee"
+      "category": "Accessories"
     }
   ]

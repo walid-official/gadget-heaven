@@ -51,7 +51,6 @@ const CardDetails = () => {
       setResetItems(false)
       setCartCount(0 + 1);
       setPrice(0 + price);
-      setModalBtnDisable(false)
     }
     
   };
