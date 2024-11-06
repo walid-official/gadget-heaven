@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { getGadgetList, removeCartGadget } from "../../utilities/storeCard";
+import { clearCartGadgets, getGadgetList, removeCartGadget } from "../../utilities/storeCard";
 import CartDetails from "./CartDetails";
 import { priceContext } from "../../Layout/Main";
 import modalImage from "../../assets/assets/Group.png";
@@ -14,8 +14,9 @@ const AddCart = () => {
 
   const handleNavigate = (event) => {
     event.preventDefault()
-    setResetItems(true)
     navigate('/')
+    setResetItems(true);
+    clearCartGadgets();
   }
 
 
@@ -25,11 +26,13 @@ const AddCart = () => {
     setCarts(cartList);
   }, [resetItems]);
 
+
+
 useEffect(()=> {
-  if(priceItem > 0){
-    setModalBtnDisable(false)
-  }
-},[priceItem])
+   if(priceItem > 0){
+      setModalBtnDisable(false)
+    }
+},[])
 
 
   const handleSorting = () => {
@@ -76,11 +79,14 @@ useEffect(()=> {
             </button>
           </div>
         </div>
+
+        {/* : <h2 className="font-bold flex items-center justify-center h-60 text-3xl">Cart is Empty</h2>  */}
+
         {
-        !resetItems ? 
+        
         carts.map((cart, index) => (
           <CartDetails key={index} handleRemoveCart={handleRemoveCart} cart={cart}></CartDetails> 
-        )) : <h2 className="font-bold flex items-center justify-center h-60 text-3xl">Cart is Empty</h2> 
+        )) 
         
         }
       </div>

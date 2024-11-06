@@ -14,7 +14,7 @@ const Navbar = () => {
     <div className="">
       <div
         className={`navbar ${
-          pathname === "/" ? "text-white" : ""
+          pathname === "/" ? "" : ""
         }  w-11/12 mx-auto`}
       >
         <div className="navbar-start">
@@ -56,13 +56,9 @@ const Navbar = () => {
           </div>
           <a
             className={`btn btn-ghost text-[18px] sm:text-2xl   ${
-              pathname === "/Dashboard" ||
-              pathname === "/statistics" ||
-              pathname === "/Contact" ||
-              pathname === "/Dashboard/cart" ||
-              pathname === "/Dashboard/wishlist"
-                ? "text-black"
-                : "text-white"
+              pathname === "/" 
+                ? "text-white"
+                : "text-black"
             }`}
           >
             Gadget Heaven
@@ -74,13 +70,9 @@ const Navbar = () => {
               to="/"
               className={({ isActive }) =>
                 `${
-                  pathname === "/Dashboard" ||
-                  pathname === "/statistics" ||
-                  pathname === "/Contact" ||
-                  pathname === "/Dashboard/cart" ||
-                  pathname === "/Dashboard/wishlist"
-                    ? "text-[#9538E2]"
-                    : ""
+                  pathname === "/"
+                    ? ""
+                    : "text-[#9538E2]"
                 } ${isActive ? "font-bold border-b-2" : ""}`
               }
             >
@@ -91,13 +83,9 @@ const Navbar = () => {
               to="/statistics"
               className={({ isActive }) =>
                 `${
-                  pathname === "/Dashboard" ||
-                  pathname === "/statistics" ||
-                  pathname === "/Contact" ||
-                  pathname === "/Dashboard/cart" ||
-                  pathname === "/Dashboard/wishlist"
-                    ? "text-[#9538E2]"
-                    : ""
+                  pathname === "/" 
+                    ? ""
+                    : "text-[#9538E2]"
                 } ${isActive ? "font-bold border-b-2" : ""}`
               }
             >
@@ -108,13 +96,9 @@ const Navbar = () => {
               to="/Dashboard"
               className={({ isActive }) =>
                 `${
-                  pathname === "/Dashboard" ||
-                  pathname === "/statistics" ||
-                  pathname === "/Contact" ||
-                  pathname === "/Dashboard/cart" ||
-                  pathname === "/Dashboard/wishlist"
-                    ? "text-[#9538E2]"
-                    : ""
+                  pathname === "/" 
+                    ? ""
+                    : "text-[#9538E2]"
                 }  ${isActive ? "font-bold border-b-2" : ""}`
               }
             >
@@ -125,13 +109,9 @@ const Navbar = () => {
               to="/Contact"
               className={({ isActive }) =>
                 `${
-                  pathname === "/Dashboard" ||
-                  pathname === "/statistics" ||
-                  pathname === "/Contact" ||
-                  pathname === "/Dashboard/cart" ||
-                  pathname === "/Dashboard/wishlist"
-                    ? "text-[#9538E2]"
-                    : ""
+                  pathname === "/" 
+                    ? ""
+                    : "text-[#9538E2]"
                 }  ${isActive ? "font-bold border-b-2" : ""}`
               }
             >

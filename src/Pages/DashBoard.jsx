@@ -30,8 +30,6 @@ const DashBoard = () => {
       </div>
     <Outlet></Outlet>
 
-
-
     </div>
   );
 };

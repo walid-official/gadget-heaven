@@ -16,7 +16,7 @@ const CardDetails = () => {
   const [detailsItem, setDetailsItem] = useState([]);
   const { cartCount, setCartCount, favoriteCount, setFavoriteCount } =
     useContext(dataContext);
-  const { priceItem, setPrice, resetItems,modalBtnDisable,setModalBtnDisable } = useContext(priceContext);
+  const { priceItem, setPrice, resetItems,setResetItems,modalBtnDisable,setModalBtnDisable } = useContext(priceContext);
   const [favoriteDisable, setFavoriteDisable] = useState(false);
 
   useEffect(() => {
@@ -46,6 +46,14 @@ const CardDetails = () => {
 
     const newPrice = priceItem + price;
     setPrice(newPrice);
+
+    if(resetItems){
+      setResetItems(false)
+      setCartCount(0 + 1);
+      setPrice(0 + price);
+      setModalBtnDisable(false)
+    }
+    
   };
 
 

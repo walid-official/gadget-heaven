@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 import Navbar from "../components/Navbar/Navbar";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation, useParams } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 export const dataContext = createContext();
 export const priceContext = createContext();
@@ -15,8 +15,7 @@ const Main = () => {
   const [priceItem,setPrice] = useState(0);
   const [resetItems,setResetItems] = useState(false);
   const [modalBtnDisable,setModalBtnDisable] = useState(true);
-
-
+ 
 
 
   return (
@@ -32,16 +31,13 @@ const Main = () => {
           </Helmet>
 
         <Toaster />
-          {pathname === "/Dashboard" ||
-          pathname === "/statistics" ||
-          pathname === "/Contact" ||
-          pathname === "/Dashboard/cart" ||
-          pathname === "/Dashboard/wishlist" ? (
-            <div className="bg-white py-4">
+          {pathname === "/"
+          ? (
+            <div className=" bg-[#9538E2] mt-8 w-[95%] rounded-tr-2xl rounded-tl-2xl mx-auto py-4">
               <Navbar></Navbar>
             </div>
           ) : (
-            <div className="bg-[#9538E2] mt-8 w-[95%] rounded-tr-2xl rounded-tl-2xl mx-auto py-4">
+            <div className="bg-white py-4">
               <Navbar></Navbar>
             </div>
           )}

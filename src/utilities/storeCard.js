@@ -28,10 +28,13 @@ const removeCartGadget = (id) => {
     const storedRemoveGadget = JSON.stringify(remainCart);
     localStorage.setItem('gadget-list',storedRemoveGadget); 
     toast.success('Successfully removed form Cart');
-   }
+}
 
 
-
+const clearCartGadgets = () => {
+    localStorage.removeItem('gadget-list');
+    toast.success('All items successfully removed from Cart');
+}
 
 
 
@@ -59,4 +62,4 @@ const addGadgetToFavorite = (favorite) => {
 
 
  
-export {addGadgetToCart,getGadgetList,removeCartGadget,getGadgetFavoriteList,addGadgetToFavorite}
+export {addGadgetToCart,getGadgetList,removeCartGadget,getGadgetFavoriteList,addGadgetToFavorite,clearCartGadgets}

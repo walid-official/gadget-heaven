@@ -7,9 +7,10 @@ import { priceContext } from '../Layout/Main';
 
 const Home = () => {
     const data = useLoaderData();
-    // const {priceItem, setPrice,resetItems,setResetItems} = useContext(priceContext);
-    // useEffect(()=>{
-    //     setResetItems(false)
+    const {priceItem,resetItems,setResetItems,modalBtnDisable,setModalBtnDisable} = useContext(priceContext);
+    // useEffect(() => {
+        
+        
     // },[])
     return (
         <div>
