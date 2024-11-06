@@ -11,6 +11,39 @@
         "rating": 4.5
     },
     {
+        "product_id": "A001",
+        "product_title": "Wireless Earbuds",
+        "product_image": "https://assets.gadgetandgear.com/upload/media/1723095149129444.jpeg",
+        "category": "Accessories",
+        "price": 129.99,
+        "description": "Compact and comfortable wireless earbuds with noise cancellation.",
+        "Specifications": ["Bluetooth 5.1", "20-hour Battery Life", "IPX5 Waterproof"],
+        "availability": true,
+        "rating": 4.7
+    },
+    {
+        "product_id": "A003",
+        "product_title": "Phone Case",
+        "product_image": "https://gadgetbd.com/wp-content/uploads/2024/07/Samsung-Galaxy-Buds-3-Pro-Wireless-Earbuds-Grey.jpg",
+        "category": "Accessories",
+        "price": 19.99,
+        "description": "Durable phone case with shock absorption and a slim profile.",
+        "Specifications": ["Shock Absorbent", "Scratch Resistant", "Lightweight"],
+        "availability": true,
+        "rating": 4.2
+    },
+    {
+        "product_id": "A002",
+        "product_title": "Portable Charger",
+        "product_image": "https://gadgetbd.com/wp-content/uploads/2024/09/AirPods_4_PDP_Image_Position_1__GBEN_ce00fb6f-98d5-41f8-bb68-4914a196dcd2.jpg",
+        "category": "Accessories",
+        "price": 39.99,
+        "description": "High-capacity portable charger to keep your devices powered on the go.",
+        "Specifications": ["10,000mAh Capacity", "Dual USB Output", "Fast Charging"],
+        "availability": false,
+        "rating": 3.5
+    },
+    {
         "product_id": "L002",
         "product_title": "Laptop Air 13",
         "product_image": "https://www.ryans.com/storage/products/small/dell-latitude-3430-intel-core-i7-1255u-8gb-ram-11709443672.webp",
@@ -19,7 +52,7 @@
         "description": "Lightweight laptop with a 13-inch Retina Display, perfect for on-the-go use.",
         "Specifications": ["8GB RAM", "256GB SSD", "M1 Chip"],
         "availability": true,
-        "rating": 4.5
+        "rating": 2.5
     },
     {
         "product_id": "L003",
@@ -30,7 +63,18 @@
         "description": "High-performance gaming laptop with advanced graphics capabilities.",
         "Specifications": ["16GB RAM", "1TB SSD", "NVIDIA RTX 3060"],
         "availability": false,
-        "rating": 4.5
+        "rating": 3.5
+    },
+    {
+        "product_id": "L006",
+        "product_title": "Laptop Mini 11",
+        "product_image": "https://www.ryans.com/storage/products/small/chuwi-gemibook-plus-intel-core-n100-8gb-ram-256gb-11703576117.webp",
+        "category": "Laptop",
+        "price": 850.00,
+        "description": "Compact laptop with a powerful processor, ideal for students.",
+        "Specifications": ["4GB RAM", "128GB SSD", "Intel Core i3"],
+        "availability": true,
+        "rating": 5
     },
     {
         "product_id": "L004",
@@ -52,19 +96,9 @@
         "description": "2-in-1 laptop with a touchscreen and stylus support.",
         "Specifications": ["8GB RAM", "256GB SSD", "360° Hinge"],
         "availability": true,
-        "rating": 4.5
+        "rating": 4.8
     },
-    {
-        "product_id": "L006",
-        "product_title": "Laptop Mini 11",
-        "product_image": "https://www.ryans.com/storage/products/small/chuwi-gemibook-plus-intel-core-n100-8gb-ram-256gb-11703576117.webp",
-        "category": "Laptop",
-        "price": 850.00,
-        "description": "Compact laptop with a powerful processor, ideal for students.",
-        "Specifications": ["4GB RAM", "128GB SSD", "Intel Core i3"],
-        "availability": true,
-        "rating": 4.5
-    },
+    
     {
         "product_id": "P001",
         "product_title": "Smartphone X",
@@ -74,7 +108,7 @@
         "description": "Latest smartphone with an advanced camera and excellent battery life.",
         "Specifications": ["128GB Storage", "5G Connectivity", "Triple Camera"],
         "availability": true,
-        "rating": 4.5
+        "rating": 4
     },
     {
         "product_id": "P002",
@@ -85,7 +119,7 @@
         "description": "Affordable phone with essential features and solid performance.",
         "Specifications": ["64GB Storage", "Dual Camera", "Long Battery Life"],
         "availability": true,
-        "rating": 4.5
+        "rating": 3
     },
     {
         "product_id": "P003",
@@ -97,38 +131,6 @@
         "Specifications": ["256GB Storage", "6.7-inch Display", "Quad Camera"],
         "availability": true,
         "rating": 4.5
-    },
-    {
-        "product_id": "A001",
-        "product_title": "Wireless Earbuds",
-        "product_image": "https://gadgetbd.com/wp-content/uploads/2024/09/AirPods_4_PDP_Image_Position_1__GBEN_ce00fb6f-98d5-41f8-bb68-4914a196dcd2.jpg",
-        "category": "Accessories",
-        "price": 129.99,
-        "description": "Compact and comfortable wireless earbuds with noise cancellation.",
-        "Specifications": ["Bluetooth 5.1", "20-hour Battery Life", "IPX5 Waterproof"],
-        "availability": true,
-        "rating": 4.5
-    },
-    {
-        "product_id": "A002",
-        "product_title": "Portable Charger",
-        "product_image": "https://gadgetbd.com/wp-content/uploads/2024/09/AirPods_4_PDP_Image_Position_1__GBEN_ce00fb6f-98d5-41f8-bb68-4914a196dcd2.jpg",
-        "category": "Accessories",
-        "price": 39.99,
-        "description": "High-capacity portable charger to keep your devices powered on the go.",
-        "Specifications": ["10,000mAh Capacity", "Dual USB Output", "Fast Charging"],
-        "availability": false,
-        "rating": 4.5
-    },
-    {
-        "product_id": "A003",
-        "product_title": "Phone Case",
-        "product_image": "https://gadgetbd.com/wp-content/uploads/2024/07/Samsung-Galaxy-Buds-3-Pro-Wireless-Earbuds-Grey.jpg",
-        "category": "Accessories",
-        "price": 19.99,
-        "description": "Durable phone case with shock absorption and a slim profile.",
-        "Specifications": ["Shock Absorbent", "Scratch Resistant", "Lightweight"],
-        "availability": true,
-        "rating": 4.5
     }
+   
 ]

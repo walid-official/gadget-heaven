@@ -6,8 +6,10 @@ import { IoCartOutline } from "react-icons/io5";
 import { addGadgetToCart, addGadgetToFavorite } from "../utilities/storeCard";
 import { dataContext, priceContext } from "../Layout/Main";
 import { Helmet } from "react-helmet";
-import favIcon from '../assets/assets/favicon-16x16.png'
-import { Rate } from "antd";
+import favIcon from "../assets/assets/favicon-16x16.png";
+import { Rating } from "@smastrom/react-rating";
+
+import "@smastrom/react-rating/style.css";
 
 const CardDetails = () => {
   const details = useLoaderData();
@@ -16,7 +18,14 @@ const CardDetails = () => {
   const [detailsItem, setDetailsItem] = useState([]);
   const { cartCount, setCartCount, favoriteCount, setFavoriteCount } =
     useContext(dataContext);
-  const { priceItem, setPrice, resetItems,setResetItems,modalBtnDisable,setModalBtnDisable } = useContext(priceContext);
+  const {
+    priceItem,
+    setPrice,
+    resetItems,
+    setResetItems,
+    modalBtnDisable,
+    setModalBtnDisable,
+  } = useContext(priceContext);
   const [favoriteDisable, setFavoriteDisable] = useState(false);
 
   useEffect(() => {
@@ -47,16 +56,12 @@ const CardDetails = () => {
     const newPrice = priceItem + price;
     setPrice(newPrice);
 
-    if(resetItems){
-      setResetItems(false)
+    if (resetItems) {
+      setResetItems(false);
       setCartCount(0 + 1);
       setPrice(0 + price);
     }
-    
   };
-
-
-
 
   const handleAddToFavorite = (detailsItem) => {
     addGadgetToFavorite(detailsItem);
@@ -111,13 +116,13 @@ const CardDetails = () => {
               <h2 className="text-xl font-bold py-3">Rating</h2>
 
               <div className="flex gap-4 items-center py-6">
-                
-                <Rate defaultValue={4.5} allowHalf allowClear={false} disabled></Rate>
-                
+                {/* <Rate defaultValue={4.5} allowHalf allowClear={false} disabled></Rate> */}
+                <Rating style={{ maxWidth: 180 }} value={rating} readOnly />
+
                 <button className="btn">{rating}</button>
               </div>
             </div>
-            
+
             <div className="flex gap-4 items-center">
               <button
                 onClick={() => handleAddToCart(detailsItem, price)}

@@ -172,7 +172,12 @@ const Navbar = () => {
             >
               <i class="fa-regular fa-heart"></i>
               <div className="bg-black w-6 h-6 text-sm -top-2 -right-1 absolute flex items-center justify-center rounded-full text-white">
-                {favoriteCount}
+                
+              { 
+                !resetItems ? favoriteCount : "0"
+              }
+               
+        
               </div>
             </a>
           </div>

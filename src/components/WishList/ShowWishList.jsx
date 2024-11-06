@@ -1,6 +1,7 @@
 import React from "react";
 
-const ShowWishList = ({ favorite }) => {
+
+const ShowWishList = ({ favorite,handleFavorite }) => {
   const {
     product_id,
     product_image,
@@ -11,6 +12,8 @@ const ShowWishList = ({ favorite }) => {
     availability,
     rating,
   } = favorite;
+
+ 
 
   return (
     <div className="w-11/12 mx-auto">
@@ -27,7 +30,7 @@ const ShowWishList = ({ favorite }) => {
           </div>
         </div>
         <div className="flex items-center px-8">
-          <button className="btn">Close</button>
+          <button onClick={() => handleFavorite(product_id)} className="btn">Close</button>
         </div>
       </div>
     </div>

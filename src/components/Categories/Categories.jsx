@@ -18,7 +18,7 @@ const Categories = () => {
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-8'>
             {
-                categoriesCard.map((card,index) => <Category key={index} card={card}></Category>)
+                categoriesCard.map((card,index) => <Category key={index}  card={card}></Category>)
             }
         </div>
     );

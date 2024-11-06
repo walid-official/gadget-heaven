@@ -13,8 +13,8 @@ import Contact from "../components/Contact/Contact";
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <Main />,
       errorElement: <ErrorPage />,
+      element: <Main />,
       children: [
         {
             path: '/',
@@ -27,10 +27,11 @@ const router = createBrowserRouter([
                     loader: () => fetch('../Products.json')
                 },
                 {
-                    path: "Card/:CategoryId",
+                    path: "/Card/:CategoryId",
                     element: <Categories></Categories>,
                     loader: () => fetch('../Products.json')
-                }
+                },
+                
             ]
         },
         {
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
             ]
         },
         {
-            path: 'cardDetails/:CardId',
+            path: '/cardDetails/:CardId',
             element: <CardDetails></CardDetails>,
             loader: () => fetch('../Products.json')
         },
@@ -69,4 +70,4 @@ const router = createBrowserRouter([
     },
   ]);
 
-  export default router
+  export default router;

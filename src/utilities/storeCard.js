@@ -33,6 +33,7 @@ const removeCartGadget = (id) => {
 
 const clearCartGadgets = () => {
     localStorage.removeItem('gadget-list');
+    localStorage.removeItem('favorite-list');
     toast.success('All items successfully removed from Cart');
 }
 
@@ -66,11 +67,11 @@ const removeFavoriteGadget = (id) => {
     const remainFavorite = favoritesRemove.filter(removeFavoriteItem => removeFavoriteItem.product_id != id);
     const storedRemoveFavorite = JSON.stringify(remainFavorite);
     localStorage.setItem('favorite-list',storedRemoveFavorite); 
-    toast.success('Successfully removed form Cart');
+    toast.success('Successfully removed form favorite');
 }
 
 
 
 
  
-export {addGadgetToCart,getGadgetList,removeCartGadget,getGadgetFavoriteList,addGadgetToFavorite,clearCartGadgets}
+export {addGadgetToCart,getGadgetList,removeCartGadget,getGadgetFavoriteList,addGadgetToFavorite,clearCartGadgets,removeFavoriteGadget}
