@@ -1,6 +1,11 @@
 import React from "react";
 import BannerImage from "../../assets/assets/banner.jpg"
+import { useNavigate } from "react-router-dom";
+
+
 const Banner = () => {
+ const navigate = useNavigate()
+  
   return (
     <div className="">
 
@@ -11,7 +16,7 @@ const Banner = () => {
             <p className="py-6 md:w-[70%] mx-auto text-white">
             Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!
             </p>
-            <button className="btn px-8 py-3 bg-white text-[#9538E2] rounded-full">Shope Now</button>
+            <button onClick={() => navigate('/Dashboard')} className="btn px-8 py-3 bg-white text-[#9538E2] rounded-full">Shope Now</button>
           </div>
         </div>
       </div>

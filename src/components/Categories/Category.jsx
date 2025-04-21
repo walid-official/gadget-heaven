@@ -5,14 +5,15 @@ const Category = ({card}) => {
     const {product_id,product_image,product_title,price} = card;
   return (
     <div>
-      <div className="card card-compact bg-base-100 shadow-xl">
+      <div className="card card-compact bg-base-100 shadow-xl rounded-lg">
         <figure>
           <img
             src={product_image}
             alt="Shoes"
+            className="w-full h-80 object-cover"
           />
         </figure>
-        <div className="card-body">
+        <div className="card-body ">
           <h2 className="card-title">{product_title}</h2>
           <p>Price: {price}K</p>
           <div className="card-actions">
